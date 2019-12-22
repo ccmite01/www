@@ -28,7 +28,7 @@ RUN : "add package" && \
     echo '[Date]' >> /usr/local/etc/php/php.ini  && \
     echo 'date.timezone = Asia/Tokyo' >> /usr/local/etc/php/php.ini
 
-ENV LANG="ja-JP.UTF-8" LYCHEE_DB_HOST="lyc:3306"
+ENV LANG="ja-JP.UTF-8" LYCHEE_DB_HOST="lyc:3306" SITE_NAME="example.com"
 
 ENTRYPOINT ["sh", "/start.sh"]
 EXPOSE 80
