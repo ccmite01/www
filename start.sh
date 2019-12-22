@@ -8,5 +8,7 @@ if [ ! -d /var/www/html/lychee ]
     mv Lychee-master lychee
     chown -R www-data:www-data /var/www/html/lychee
 fi
+sed -i "s/imagejpeg/imagepng/g" /var/www/html/lychee/php/Modules/Photo.php
+sed -i "s/quality = 90;/quality = 9;/g" /var/www/html/lychee/php/Modules/Photo.php
 
 /usr/sbin/apachectl -D FOREGROUND
