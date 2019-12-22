@@ -1,8 +1,9 @@
 #!/bin/bash
 if [ ! -d /var/www/html/lychee ]
     then
-    unzip master.zip
-    mv Lychee-master /var/www/html/lychee
+    cd /var/www/html
+    unzip /master.zip
+    mv Lychee-master lychee
     chown -R www-data:www-data /var/www/html/lychee
 fi
 
