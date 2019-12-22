@@ -24,6 +24,7 @@ services:
     volumes:
       - '/opt/web/root:/var/www/html'
       - '/opt/minecraft/dynmapweb:/var/www/html/map'
+      - '/opt/web/log:/var/log/apache2'
     environment:
       LANG: ja-JP.UTF-8
       LYCHEE_DB_HOST: "lyc:3306"
