@@ -2,7 +2,7 @@ This docker image provides a web server and picture db.
 
 
 # To simply use the latest stable version, run
-docker run -d -v /opt/web/root:/var/www/html -v /opt/web/lychee:/var/www/html/lychee --name www ccmite/www
+docker run -d -v /opt/web/root:/var/www/html --name www ccmite/www
 
 
 # Example Docker Compose app
@@ -23,7 +23,6 @@ services:
       - '80:80'
     volumes:
       - '/opt/web/root:/var/www/html'
-      - '/opt/web/lychee:/var/www/html/lychee'
       - '/opt/minecraft/dynmapweb:/var/www/html/map'
     environment:
       LANG: ja-JP.UTF-8
@@ -41,7 +40,7 @@ services:
     ports:
       - '3310:3306'
     volumes:
-      - '/share/11LYC/mysql:/var/lib/mysql'
+      - '/opt/minecraft/lycheedb:/var/lib/mysql'
     environment:
       MARIADB_ROOT_PASSWORD: do_not_copy_and_paste
       MARIADB_DATABASE: lychee
