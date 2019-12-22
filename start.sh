@@ -7,4 +7,4 @@ if [ ! -d /var/www/html/lychee ]
     chown -R www-data:www-data /var/www/html/lychee
 fi
 
-/usr/sbin/apachectl start
+/usr/sbin/apachectl -D FOREGROUND
